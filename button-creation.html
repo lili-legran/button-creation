@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./button-creation.min.css">
+  <title>Button creation</title>
+</head>
+
+<body>
+  <div class='application'>
+    <div class="row">
+      <div class="buttons-props_">
+        <label for='button-width' class='buttons-props__name'>Ширина:</label>
+        <input class='buttons-props__width' id='button-width'>
+      </div>
+      <div class="buttons-props_">
+        <label for='button-height' class='buttons-props__name'>Высота:</label>
+        <input class='buttons-props__height' id='button-height'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="buttons-props_">
+        <label for='button-color' class='buttons-props__name'>Цвет текста:</label>
+        <input class='buttons-props__color' id='button-color'>
+      </div>
+      <div class="buttons-props_">
+        <label for='button-background' class='buttons-props__name'>Цвет кнопки:</label>
+        <input class='buttons-props__background' id='button-background'>
+      </div>
+    </div>
+    <div class="row">
+      <button class='button__creator'>СОЗДАТЬ</button>
+    </div>
+    <div class="created-buttons">
+      <!-- <button class='button__result'>КНОПКА</button> -->
+    </div>
+  </div>
+  <script src='./button-creation.js'></script>
+</body>
+
+</html>
