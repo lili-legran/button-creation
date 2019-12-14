@@ -1,6 +1,10 @@
 const buttonCreator = document.querySelector('.button__creator');
 const createdButtonsContainer = document.querySelector('.created-buttons');
 const buttonClear = document.querySelector('.button__clear');
+const buttonFill = document.querySelector('.button__fill');
+const COLORS = [
+  'red', 'blue', 'green', 'grey', 'yellow', 'purple', 'aqua', 'cornflowerblue', 'coral', 'fuchsia'
+];
 
 const createNewButton = () => {
   let buttonProps = new ButtonProps();
@@ -41,4 +45,24 @@ const clearButtonProps = () => {
   inputs.background.value = '';
 };
 
+const generateRandomValue = (value = 0) => {
+  return 40 + value + Math.floor(Math.random() * 100);  
+}
+
+const generateRandomColor = (color) => {
+  let randomIndex;
+  do {
+    randomIndex = Math.floor(Math.random() * COLORS.length);
+  } while (COLORS[randomIndex] === color)
+  return COLORS[randomIndex];
+}
+
+const fillRandomButtonProps = () => {
+  inputs.width.value = generateRandomValue(60);
+  inputs.height.value = generateRandomValue();
+  inputs.color.value = generateRandomColor();
+  inputs.background.value = generateRandomColor(inputs.color.value);
+}
+
 buttonCreator.addEventListener('click', createNewButton);
+buttonFill.addEventListener('click', fillRandomButtonProps);
