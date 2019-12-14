@@ -1,5 +1,6 @@
 const buttonCreator = document.querySelector('.button__creator');
 const createdButtonsContainer = document.querySelector('.created-buttons');
+const buttonClear = document.querySelector('.button__clear');
 
 const createNewButton = () => {
   let buttonProps = new ButtonProps();
@@ -7,7 +8,7 @@ const createNewButton = () => {
   newButton.classList.add('button__result');
   const updatedButton = setNewButtonProps(newButton, buttonProps);
   createdButtonsContainer.appendChild(updatedButton);
-  clearButtonProps();
+  buttonClear.addEventListener('click', clearButtonProps);
 }
 
 const inputs = {
