@@ -34,7 +34,7 @@ const setNewButtonProps = (newButton, props) => {
   newButton.style.height = props.height;
   newButton.style.color = props.color;
   newButton.style.background = props.background;
-  newButton.innerText = 'Кнопка';
+  newButton.innerText = 'BUTTON';
   return newButton;
 }
 
